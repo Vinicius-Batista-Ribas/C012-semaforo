@@ -11,7 +11,7 @@ public class Main {
        Thread[] threads = new Thread[6];
 
        for(int i = 0; i < 6; i++) {
-           threads[i] = new Thread(new ProcessoCantina(FilaDaFixa, FilaDoLanche, "Alternando"));
+           threads[i] = new Thread(new ProcessoCantina(FilaDaFixa, FilaDoLanche));
        }
 
        for (int i = 0; i < 6; i++) {

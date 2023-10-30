@@ -14,7 +14,7 @@ public class Cantina {
         }
     }
 
-    public void filaComSemaforo(String fila) {
+    public void filaComSemaforo() {
         if (comSemaforo) {
             try {
                 semaphore.acquire();
@@ -28,7 +28,7 @@ public class Cantina {
         }
     }
 
-    public void filaSemSemaforo(String fila) {
+    public void filaSemSemaforo() {
         if (!comSemaforo) {
             System.out.println(Thread.currentThread().getName() + " da fila está SENDO ATENDIDO!");
             System.out.println("Documento da " + Thread.currentThread().getName() + " da fila PEGOU SEU LANCHE!");

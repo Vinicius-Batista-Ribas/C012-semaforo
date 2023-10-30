@@ -5,17 +5,16 @@ public class ProcessoCantina implements Runnable{
         private Cantina lanche; // fila do lanche
         private String fila;
 
-        public ProcessoCantina(Cantina impressoraComSemaforo, Cantina impressoraSemSemaforo, String fila) {
+        public ProcessoCantina(Cantina impressoraComSemaforo, Cantina impressoraSemSemaforo) {
             this.fixa = impressoraComSemaforo;
             this.lanche = impressoraSemSemaforo;
-            this.fila = fila;
         }
 
 
         @Override
         public void run() {
-            fixa.filaComSemaforo(fila);
-            lanche.filaSemSemaforo(fila);
+            fixa.filaComSemaforo();
+            lanche.filaSemSemaforo();
         }
 }
 
